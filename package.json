@@ -1,0 +1,32 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite"
+    },
+    "devDependencies": {
+        "@popperjs/core": "^2.11.6",
+        "@vitejs/plugin-vue": "^4.5.0",
+        "autoprefixer": "^10.4.20",
+        "axios": "^1.7.4",
+        "bootstrap": "^5.3.3",
+        "concurrently": "^9.0.1",
+        "laravel-vite-plugin": "^1.0.5",
+        "postcss": "^8.4.47",
+        "sass": "^1.81.0",
+        "tailwindcss": "^3.4.13",
+        "vite": "^5.4.9",
+        "vue": "^3.2.37"
+    },
+    "dependencies": {
+        "@edenchazard/vue-dark-mode-toggle": "^1.0.4",
+        "@vueuse/core": "^11.2.0",
+        "vue-good-table": "^2.21.11",
+        "vue-good-table-next": "^0.2.2",
+        "vue-plugin-load-script": "^2.1.1",
+        "vue-router": "^4.4.5",
+        "vue-sweetalert2": "^5.0.11",
+        "vuex": "^4.1.0"
+    }
+}
