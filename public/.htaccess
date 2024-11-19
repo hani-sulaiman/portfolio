@@ -1,10 +1,21 @@
-RewriteEngine on
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks
+    RewriteEngine On
 
-# Define the base path to the Laravel public folder
-RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -f
-RewriteRule ^(.*)$ /public/$1 [L]
+    # Redirect index.php requests (skip if the requested file or directory exists)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
 
-# Route everything else to the public/index.php
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ /public/index.php [L]
+    # Deny access to git, environment, and other sensitive files
+    <FilesMatch "^(\.env|\.git|composer\.(json|lock)|package\.json|package-lock\.json|vite\.config\.js)$">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+</IfModule>
+
+# Enable Gzip compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
