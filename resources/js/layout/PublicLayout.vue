@@ -147,8 +147,7 @@
 </template>
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import { nextTick, ref, computed } from 'vue';
-import { loadScript } from '@/utils/loadScripts';
+import { ref, computed } from 'vue';
 
 export default {
     setup() {
@@ -168,7 +167,7 @@ export default {
 
             // Reload the page after 0.5 seconds
             setTimeout(() => {
-                location.reload();
+                window.location.reload(true);
             }, 500);
         };
 
@@ -207,29 +206,11 @@ export default {
         removePlusSign(number) {
             return number ? number.replace(/\+/g, '') : null;
         },
-        async loadExternalScripts() {
-            const scripts = [
-                "assets/js/core.min.js",
-                "assets/js/mouse.js",
-                "assets/js/main.js",
-            ];
-
-            try {
-                for (const src of scripts) {
-                    await loadScript(src);
-                }
-            } catch (error) {
-                console.error('Error loading external scripts:', error);
-            }
-        },
+        
     },
     async created() {
         await this.fetchSettings();
 
-    },
-    async mounted() {
-        await nextTick();
-        await this.loadExternalScripts();
     },
 };
 </script>
