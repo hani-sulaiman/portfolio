@@ -1,0 +1,137 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.sidebar {
+    min-width: 230px;
+    max-width: 250px;
+    background-image: linear-gradient(to right, #8750f7 0%, #3c1c78 100%);
+    height: 100vh;
+    color: #ffffff;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    transform: translateX(0%);
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%);
+}
+.hamburger-button {
+    display: none;
+}
+.sidebar a {
+    color: #ffffff;
+
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #000;
+    color: #ffffff;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    transition: margin-left 0.3s ease;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.dashboard-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.dashboard-card .bi {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #3c1c78;
+}
+
+/* Responsive CSS */
+@media (max-width: 1024px) {
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        transform: translateX(0%);
+    }
+
+    .hamburger-button {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1100;
+        background-color: #343a40;
+        color: #ffffff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        min-width: 100%;
+        padding-bottom: 10px;
+        transform: translateX(0%);
+    }
+
+    .sidebar nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-content {
+        padding-top: 110px;
+    }
+    .sidebar a {
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+.dropdown-content {
+    display: none;
+    padding-left: 20px;
+}
+
+.dropdown-content a {
+    padding-left: 10px;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}

@@ -1,0 +1,481 @@
+* {
+    box-sizing: border-box;
+}
+.create-client-page {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn {
+    margin-right: 15px;
+}
+.edit-client-page {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+.client-management {
+    padding: 20px;
+}
+.client-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.btn-sm {
+    margin-right: 10px;
+}
+.about-cms-page {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.cover-preview {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    margin-top: 15px;
+}
+.contact-cms-page {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.cover-preview {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.projects-cms-page {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.cover-preview {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.services-cms-page {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.cover-preview {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    margin-top: 15px;
+}
+.client-section-editor {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.save-message {
+    margin-top: 10px;
+    color: green;
+}
+.hero-section-editor {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.save-message {
+    margin-top: 10px;
+    color: green;
+}
+.projects-section-editor {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.save-message {
+    margin-top: 10px;
+    color: green;
+}
+.service-section-editor {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.save-message {
+    margin-top: 10px;
+    color: green;
+}
+.work-togather-section-editor {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.save-message {
+    margin-top: 10px;
+    color: green;
+}
+.create-education-page {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn {
+    margin-right: 10px;
+}
+.edit-education-page {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn {
+    margin-right: 10px;
+}
+.education-management {
+    padding: 20px;
+}
+
+.btn {
+    margin-bottom: 20px;
+}
+
+.btn-sm {
+    margin-right: 10px;
+}
+
+.create-experience-page {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn {
+    margin-right: 10px;
+}
+.edit-experience-page {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn {
+    margin-right: 10px;
+}
+.experience-management {
+    padding: 20px;
+}
+
+.btn {
+    margin-bottom: 20px;
+}
+
+.btn-sm {
+    margin-right: 10px;
+}
+.create-project-page {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.thumbnail-preview,
+.more-image-preview {
+    margin-top: 10px;
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.more-images-preview {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    margin-right: 10px;
+}
+.edit-project-page {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.thumbnail-preview,
+.more-image-preview {
+    margin-top: 10px;
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.more-images-preview {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    margin-right: 10px;
+}
+.project-management {
+    padding: 20px;
+}
+.service {
+    background-color: rgb(237, 237, 237);
+    padding: 5px 10px;
+    margin: 0px 3px;
+    border-radius: 3px;
+}
+.thumbnail-image {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.btn {
+    margin-bottom: 20px;
+}
+
+.btn-sm {
+    margin-right: 10px;
+}
+.create-service-page {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.image-preview {
+    margin-top: 10px;
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.btn {
+    margin-right: 10px;
+}
+.service-management {
+    padding: 20px;
+}
+
+.service-image {
+    width: 50px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.btn {
+    margin-bottom: 20px;
+}
+
+.btn-sm {
+    margin-right: 10px;
+}
+.create-skill-page {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.icon-image-preview {
+    margin-top: 10px;
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.btn {
+    margin-right: 10px;
+}
+
+.edit-skill-page {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.icon-image-preview {
+    margin-top: 10px;
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.btn {
+    margin-right: 10px;
+}
+.skill-management {
+    padding: 20px;
+}
+
+.icon-image-preview {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.btn {
+    margin-bottom: 20px;
+}
+
+.btn-sm {
+    margin-right: 10px;
+}
