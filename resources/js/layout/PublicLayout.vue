@@ -167,7 +167,9 @@ export default {
 
             // Reload the page after 0.5 seconds
             setTimeout(() => {
-                window.location.reload(true);
+                const currentUrl = window.location.href.split('?')[0];
+                window.location.replace(`${currentUrl}?nocache=${new Date().getTime()}`);
+
             }, 500);
         };
 
@@ -206,7 +208,7 @@ export default {
         removePlusSign(number) {
             return number ? number.replace(/\+/g, '') : null;
         },
-        
+
     },
     async created() {
         await this.fetchSettings();
