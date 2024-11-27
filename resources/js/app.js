@@ -19,10 +19,11 @@ router.isReady().then(() => {
 });
   
 async function loadExternalScripts() {
+    const version = new Date().getTime(); // Unique timestamp for each reload
     const scripts = [
-        "assets/js/core.min.js",
-        "assets/js/mouse.js",
-        "assets/js/main.js",
+        `/assets/js/core.min.js?v=${version}`,
+        `/assets/js/mouse.js?v=${version}`,
+        `/assets/js/main.js?v=${version}`,
     ];
 
     try {

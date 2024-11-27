@@ -57,9 +57,9 @@ export default {
     ]),
 
   },
-  async created() {
+   created() {
     try {
-      await Promise.all([
+       Promise.all([
         this.fetchSettings(),
         this.fetchHeroSection(),
         this.fetchServicesSection(),
