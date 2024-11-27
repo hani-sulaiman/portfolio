@@ -8,7 +8,9 @@
   <!-- Place favicon.ico in the root directory -->
   <link rel="apple-touch-icon" href="assets/img/logo/logo.png" />
   <link rel="shortcut icon" href="{{ asset('favicon.png') }}" type="image/x-icon">
-
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <!-- CSS here -->
   <link rel="stylesheet" href="assets/css/animate.min.css" />
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
