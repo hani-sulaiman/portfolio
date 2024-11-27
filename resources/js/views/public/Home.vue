@@ -4,7 +4,7 @@
   <!-- Main content -->
   <BackToTop />
   <div v-if="!loading">
-    <LoaderComponent v-if="!loaded" />
+    <LoaderComponent/>
     <HeroSection />
     <ServicesSection />
     <MyWorksSection />
@@ -25,8 +25,7 @@ import ResumeSection from '../../components/public/Home/ResumeSection.vue';
 import ServicesSection from '../../components/public/Home/ServicesSection.vue';
 import SkillsSection from '../../components/public/Home/SkillsSection.vue';
 import WorkTogtherSection from '../../components/public/Home/WorkTogtherSection.vue';
-import { mapActions } from 'vuex';
-import { nextTick } from 'vue';
+import { mapActions } from 'vuex'
 export default {
   name: 'HomeView',
   components: {
@@ -43,7 +42,6 @@ export default {
   data() {
     return {
       loading: true,
-      loaded:false
     };
   },
   methods: {
@@ -77,12 +75,6 @@ export default {
       this.loading = false;
     }
   },
-  async mounted(){
-    await nextTick()
-    setTimeout(()=>{
-      this.loaded = true
-    },6000)
-  }
 };
 </script>
 

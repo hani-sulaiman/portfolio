@@ -2,11 +2,13 @@ import { defineConfig } from "vite";
 import laravel from "laravel-vite-plugin";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
+
 export default defineConfig({
     plugins: [
         laravel({
-            input: ["resources/js/app.js"],
+            input: ["resources/js/app.js", "resources/css/app.css"],
             refresh: true,
+            buildDirectory: 'build',
         }),
         vue({
             template: {
@@ -25,5 +27,19 @@ export default defineConfig({
     },
     build: {
         chunkSizeWarningLimit: 10000,
+        rollupOptions: {
+            output: {
+                entryFileNames: 'assets/[name].[hash].js',
+                chunkFileNames: 'assets/[name].[hash].js',
+                assetFileNames: 'assets/[name].[hash].[ext]',
+            },
+        },
+    },
+    server: {
+        headers: {
+            'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0',
+            'Pragma': 'no-cache',
+            'Expires': '0',
+        },
     },
 });

@@ -1,67 +1,28 @@
-<IfModule mod_headers.c>
-    Header set Content-Security-Policy "script-src 'self'"
-</IfModule>
-<IfModule LiteSpeed>
-    LsRecaptcha 0
-</IfModule>
 <IfModule mod_rewrite.c>
+    Options +FollowSymLinks
     RewriteEngine On
 
-    # Redirect Trailing Slashes If Not A Folder...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)/$ /$1 [L,R=301]
-
-    # Handle Front Controller...
+    # Redirect index.php requests (skip if the requested file or directory exists)
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ /public/index.php [L]
+    RewriteRule ^ index.php [L]
 
-    # Ensure Directory Index
-    DirectoryIndex index.php
-
-    # Prevent Directory Listings
-    Options -Indexes
-
-    # Hide .env and other sensitive files
-    <Files .env>
-        Order allow,deny
-        Deny from all
-    </Files>
-
-    # Protect .htaccess file
-    <Files ~ "^.*\.([Hh][Tt][Aa])">
-        Order allow,deny
-        Deny from all
-        Satisfy All
-    </Files>
-
-    # Cache Control Headers (optional)
-    <IfModule mod_headers.c>
-        <FilesMatch "\.(jpg|jpeg|png|gif|swf|ico|pdf|css|js)$">
-            Header set Cache-Control "max-age=2592000, public"
-        </FilesMatch>
-        <FilesMatch "\.(html|htm|xml|txt)$">
-            Header set Cache-Control "max-age=7200, private, must-revalidate"
-        </FilesMatch>
-    </IfModule>
-
-    # Disable Access to Git
-    <Files ~ "^\.git">
-        Order deny,allow
-        Deny from all
-    </Files>
-
-    # Block access to Composer files
-    <FilesMatch "composer\.(json|lock)">
+    # Deny access to git, environment, and other sensitive files
+    <FilesMatch "^(\.env|\.git|composer\.(json|lock)|package\.json|package-lock\.json|vite\.config\.js)$">
         Order allow,deny
         Deny from all
     </FilesMatch>
-
 </IfModule>
 
-# Additional Security Headers
+# Enable Gzip compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
 <IfModule mod_headers.c>
-    Header set X-Content-Type-Options nosniff
-    Header set X-Frame-Options "SAMEORIGIN"
-    Header set X-XSS-Protection "1; mode=block"
+    <FilesMatch "\.(html|htm|js|css|json|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+        Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+    </FilesMatch>
 </IfModule>
+
