@@ -12,9 +12,9 @@ app.use(LoadScript);
 app.use(VueSweetalert2);
 app.use(store);
 app.use(router);
-app.mount("body");
 
-nextTick(() => {
+router.isReady().then(() => {
+    app.mount("body");
     loadExternalScripts();
 });
   
