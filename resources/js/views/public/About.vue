@@ -125,7 +125,7 @@
                   </div>
                   <div class="col-6 col-lg-3">
                     <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center wow fadeInUp" data-wow-delay=".5s">
-                      <div class="number"><span class="odometer" :data-count="statistics.happy_clients">{{ statistics.happy_clients }}</span>K</div>
+                      <div class="number"><span class="odometer" :data-count="statistics.happy_clients">{{ statistics.happy_clients }}</span></div>
                       <div class="text">Happy <br />Clients</div>
                     </div>
                   </div>
