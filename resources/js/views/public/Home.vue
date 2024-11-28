@@ -4,7 +4,7 @@
   <!-- Main content -->
   <BackToTop />
   <div v-if="!loading">
-    <LoaderComponent/>
+    <LoaderComponent />
     <HeroSection />
     <ServicesSection />
     <MyWorksSection />
@@ -57,9 +57,9 @@ export default {
     ]),
 
   },
-   created() {
+  async created() {
     try {
-       Promise.all([
+      await Promise.all([
         this.fetchSettings(),
         this.fetchHeroSection(),
         this.fetchServicesSection(),
