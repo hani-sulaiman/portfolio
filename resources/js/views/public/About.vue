@@ -11,7 +11,7 @@
               <div class="breadcrumb_content d-flex flex-column align-items-center">
                 <h2 class="title wow fadeInUp" data-wow-delay=".3s">About</h2>
                 <div class="breadcrumb_navigation wow fadeInUp" data-wow-delay=".5s">
-                  <span><a href="index.html">Home</a></span>
+                  <span><a href="/">Home</a></span>
                   <i class="far fa-long-arrow-right"></i>
                   <span class="current-item">About</span>
                 </div>
@@ -226,12 +226,6 @@ export default {
     await this.fetchClientsSection();
     this.loading = false;
   },
-  async mounted(){
-    await nextTick()
-    setTimeout(()=>{
-      this.loaded = true
-    },6000)
-  }
 };
 </script>
 
